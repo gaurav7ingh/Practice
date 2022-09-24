@@ -1,6 +1,6 @@
 package com.gaurav;
 
-public class printBrahma {
+public class PrintBrahma {
 	
 	static void print(String s,String h,String a,int n) {
 		if(n==1) {

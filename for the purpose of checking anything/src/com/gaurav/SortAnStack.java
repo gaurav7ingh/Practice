@@ -2,7 +2,7 @@ package com.gaurav;
 
 import java.util.Stack;
 
-public class sortAnStack {
+public class SortAnStack {
 	
 	
 	void sort(Stack<Integer> st) {
@@ -36,7 +36,7 @@ public class sortAnStack {
 		st.push(7);
 		st.push(5);
 		
-		sortAnStack sortAnStack = new sortAnStack();
+		SortAnStack sortAnStack = new SortAnStack();
 		
 		sortAnStack.sort(st);
 		
