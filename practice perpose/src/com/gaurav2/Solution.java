@@ -18,6 +18,7 @@ public class Solution {
     }
     
     public static void main(String[] args) {
-       
+     Date date = new Date(2022, 10, 12);
+     System.out.println( date.getDay());
     }
 }
