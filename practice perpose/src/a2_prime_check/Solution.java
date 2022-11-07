@@ -1,4 +1,4 @@
-package b_prime_check;
+package a2_prime_check;
 
 public class Solution {
 
