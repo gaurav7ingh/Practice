@@ -1,4 +1,4 @@
-package BinaryRepresentationOfNumber;
+package c_binary_representation_of_number;
 
 public class Solution {
 	
