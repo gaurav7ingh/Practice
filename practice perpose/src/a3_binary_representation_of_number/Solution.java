@@ -1,4 +1,4 @@
-package c_binary_representation_of_number;
+package a3_binary_representation_of_number;
 
 public class Solution {
 	
