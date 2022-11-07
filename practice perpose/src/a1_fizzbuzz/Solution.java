@@ -1,4 +1,4 @@
-package fizzbuzz;
+package a1_fizzbuzz;
 
 public class Solution {
 	
