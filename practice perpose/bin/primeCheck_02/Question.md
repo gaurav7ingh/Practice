@@ -26,7 +26,7 @@ A prime number N, is only divisible by 1 and itself. 2, 3, 5, 7, 11, 13, ... are
 
 - Pseudo code:
 
-    ```python
+    ```java
     F = 0; // Number of factors.
 
     for( X from 1 to sqrt(N) ){
@@ -49,7 +49,8 @@ A prime number N, is only divisible by 1 and itself. 2, 3, 5, 7, 11, 13, ... are
     ```
 
 - Example:
-    ```python
+    
+    ```java
     Let N = 5.
 
     Hence sqrt(N) = 2 ( lower bound ).
