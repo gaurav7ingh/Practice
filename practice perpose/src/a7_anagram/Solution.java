@@ -19,8 +19,9 @@ public class Solution {
 			Character c = t.charAt(i);
 			if (map.containsKey(c)) {
 				map.put(c, map.get(c) - 1);
-			} else
+			} else {
 				return false;
+			}
 
 			if (map.get(c) <= 0)
 				map.remove(c);
