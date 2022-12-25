@@ -3,9 +3,9 @@ package a8_CheckForPalindrome;
 import java.util.Scanner;
 
 public class Solution_II {
-	public static boolean isPalindrome(String s) {
+	public static boolean isPalindrome(int n,String s) {
 		int begin = 0;
-		int end = s.length()-1;
+		int end = n-1;
 		while(begin<end) {
 			if(s.charAt(begin)!=s.charAt(end))
 				return false;
@@ -16,8 +16,9 @@ public class Solution_II {
 	}
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
+		int n = sc.nextInt();
 		String s = sc.next();
-		boolean ans = isPalindrome(s);
+		boolean ans = isPalindrome(n,s);
 		if(ans)
 			System.out.println("This is a valid palindrome");
 		else
