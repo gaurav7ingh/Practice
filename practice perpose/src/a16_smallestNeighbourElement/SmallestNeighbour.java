@@ -13,20 +13,24 @@ public class SmallestNeighbour {
 
 	static void findNearestSmallerElement(int n, int[] arr) {
 		
-		int[] right = new int[n];
-		for(int i = n-1;i>=0; i--) {
-			while(!st.isEmpty() && arr[i]>=arr[st.peek()]) {
-				st.pop();
+		int[] left = smallerToTheLeft(n, arr);
+		int[] right = smallerToTheRight(n, arr);
+		
+		int[] ans = new int[n];
+		for(int i = 0;i<n; i++) {
+			if(left[i]==-1 && right[i]==-1) {
+				ans[i] = -1;
+			}else if(left[i]==-1 || right[i]==-1) {
+				ans[i] = arr[Math.max(left[i], right[i])];
+			}else {
+				int l = Math.abs(i-left[i]);
+				int r = Math.abs(i-right[i]);
+				ans[i] = arr[Math.min(l, r)];
 			}
-			if(st.isEmpty())
-				right[i] = -1;
-			else 
-				right[i] = st.peek();
-			st.push(i);
 		}
 		
-		for(int i = 0;i<n; i++) {
-			
+		for(int i : ans) {
+			System.out.print(i+ " ");
 		}
 	}
 	
@@ -34,7 +38,7 @@ public class SmallestNeighbour {
 		Stack<Integer> st = new Stack<>();
 		int[] left = new int[n];
 		for(int i = 0;i<n; i++) {
-			while(!st.isEmpty() && arr[i]>=arr[st.peek()]) {
+			while(!st.isEmpty() && arr[i]<=arr[st.peek()]) {
 				st.pop();
 			}
 			if(st.isEmpty())
@@ -51,7 +55,7 @@ public class SmallestNeighbour {
 		Stack<Integer> st = new Stack<>();
 		int[] right = new int[n];
 		for(int i = n-1;i>=0; i--) {
-			while(!st.isEmpty() && arr[i]>=arr[st.peek()]) {
+			while(!st.isEmpty() && arr[i]<=arr[st.peek()]) {
 				st.pop();
 			}
 			if(st.isEmpty())
