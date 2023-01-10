@@ -1,7 +1,5 @@
 package a15_sortAnArrayOf012;
 
-import com.gaurav.SortAnArray;
-
 public class Solution {
 
 	private static void sortArray(int[] arr) {
