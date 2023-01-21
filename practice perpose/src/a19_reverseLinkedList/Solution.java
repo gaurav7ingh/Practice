@@ -20,22 +20,21 @@ public class Solution {
 	public static void main(String[] args) {
 		int[] arr = { 1, 2, 3, 4 };
 		Node list = generateSinglyLinkedList(arr);
-		reverseLinkedList(list);
+		list = reverseLinkedList(list);
 		printList(list);
 	}
 
 	// This function adds two Singly linked list.
 	public static Node reverseLinkedList(Node head) {
 		Node current = head;
-		Node after = null;
-		Node before = null;
+		Node pre = null;
 		while (current != null) {
-			after = current.next;
-			current.next = before;
-			before = current;
+			Node after = current.next;
+			current.next = pre;
+			pre = current;
 			current = after;
 		}
-		head = before;
+		head = pre;
 		return head;
 	}
 
