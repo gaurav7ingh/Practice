@@ -1,10 +1,10 @@
 package a18_addTwoLinkedList;
 
-class Node{
-	int data;
-	Node next;
+public class Node{
+	public int data;
+	public Node next;
 
-	Node(int data){
+	public Node(int data){
 		this.data = data;
 		this.next = null;
 	}
