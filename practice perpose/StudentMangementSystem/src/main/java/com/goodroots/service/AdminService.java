@@ -10,8 +10,13 @@ import com.goodroots.model.Student;
 
 @Service
 public interface AdminService {
-	boolean logIn(String username,String password) throws AdminException;
+	boolean logIn(String username, String password) throws AdminException;
+
 	Student addStudent(Student student) throws StudentException;
+
 	List<Student> getAllStudent() throws StudentException;
+
 	Student findStudentByUserName(String username) throws StudentException;
+
+	Student removeStudent(String username) throws StudentException;
 }

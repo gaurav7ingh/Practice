@@ -7,8 +7,9 @@ import com.goodroots.model.Student;
 
 @Service
 public interface StudentService {
-	
+
 	boolean logIn(String username, String password) throws StudentException;
-	Student updateStudent(String username,Student student) throws StudentException;
-	Student removeStudent(String username) throws StudentException;
+
+	Student updateStudent(String username, Student student) throws StudentException;
+
 }
