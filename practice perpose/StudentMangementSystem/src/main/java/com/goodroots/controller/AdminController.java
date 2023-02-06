@@ -5,6 +5,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -28,7 +29,7 @@ public class AdminController {
 	}
 	
 	@PostMapping("/students")
-	public ResponseEntity<Student> addStudent(Student student) throws StudentException{
+	public ResponseEntity<Student> addStudent(@RequestBody Student student) throws StudentException{
 		student = service.addStudent(student);
 		return new ResponseEntity<Student>(student,HttpStatus.CREATED);
 	}
@@ -40,13 +41,13 @@ public class AdminController {
 	}
 
 	@GetMapping("/studetns/{username}")
-	public ResponseEntity<Student> findStudentByUserName(String username) throws StudentException{
+	public ResponseEntity<Student> findStudentByUserName(@PathVariable String username) throws StudentException{
 		Student student = service.findStudentByUserName(username);
 		return new ResponseEntity<Student>(student,HttpStatus.OK);
 	}
 
-	@DeleteMapping
-	public ResponseEntity<Student> removeStudent(String username) throws StudentException{
+	@DeleteMapping("/{username}")
+	public ResponseEntity<Student> removeStudent(@PathVariable String username) throws StudentException{
 		Student student = service.removeStudent(username);
 		return new ResponseEntity<Student>(student,HttpStatus.ACCEPTED);
 	}
