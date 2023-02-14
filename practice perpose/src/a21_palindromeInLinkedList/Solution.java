@@ -1,8 +1,6 @@
-package a21_iDont;
+package a21_palindromeInLinkedList;
 
-import java.io.*;
-import java.lang.*;
-import java.util.*;
+import java.util.Stack;
 
 //This class implements the structure of the Singly linked list
 class Node{
