@@ -9,7 +9,11 @@ Note: You can assume that the answer always exists
 	
 
 #### **Sample Output**
-	6
+	6  
+	
+	from
+	
+	[4,-1,2,1]
 
 #### **Expected Time Complexity**
 __O__(N),where N is the size of the array. 
