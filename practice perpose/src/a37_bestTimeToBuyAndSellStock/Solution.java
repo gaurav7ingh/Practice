@@ -2,7 +2,7 @@ package a37_bestTimeToBuyAndSellStock;
 
 public class Solution {
 	// This function implements the required function.
-	public static int bestTimeToBuySellStock(int[] prices) {
+	public static int bestTimeForStocks(int[] prices) {
 		if (prices.length <= 1) {
 			return 0;
 		}
@@ -23,7 +23,7 @@ public class Solution {
 	// Main Function
 	public static void main(String[] args) {
 		int[] prices = { 7, 1, 5, 3, 6, 4 };
-		int ans = bestTimeToBuySellStock(prices);
+		int ans = bestTimeForStocks(prices);
 		System.out.println(ans);
 
 	}
