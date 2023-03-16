@@ -38,8 +38,7 @@ public class Solution {
 		}
 		return ans.toString();
 	}
-
-	// Main Function
+	
 	public static void main(String[] args) {
 		String str = "xyzasisayzx";
 		String ans = longestPalindromicSubstring(str);
