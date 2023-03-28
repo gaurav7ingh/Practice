@@ -3,7 +3,7 @@ package a49_rodCuttingProblem;
 public class Solution {
 	// This function returns the maximum price that can be obtained on cutting the
 	// problems.
-	public static int rodCuttingProblem(int price[], int n) {
+	public static int rodCuttingProblem(int price[], int lengths[], int n) {
 		int value[] = new int[n + 1];
 		value[0] = 0;
 
@@ -24,6 +24,6 @@ public class Solution {
 		int[] lengths = { 1, 2, 3, 4, 6, 7, 8 };
 		int prices[] = { 1, 5, 8, 9, 10, 17, 17, 20 };
 		int n = 4;
-		System.out.println(rodCuttingProblem(prices, n));
+		System.out.println(rodCuttingProblem(prices,lengths, n));
 	}
 }
