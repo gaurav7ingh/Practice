@@ -1,4 +1,4 @@
-package com.gaurav2;
+package com.gaurav;
 
 public class DoubleCheck {
 	public static void main(String[] args) {

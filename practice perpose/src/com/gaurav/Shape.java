@@ -1,4 +1,4 @@
-package com.gaurav2;
+package com.gaurav;
 
 public class Shape {
 	int length;
